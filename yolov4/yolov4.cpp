@@ -24,10 +24,10 @@
         }\
     } while (0)
 
-#define USE_FP16  // comment out this if want to use FP32
+//#define USE_FP16  // comment out this if want to use FP32
 #define DEVICE 0  // GPU id
-#define NMS_THRESH 0.4
-#define BBOX_CONF_THRESH 0.5
+#define NMS_THRESH 0.213
+#define BBOX_CONF_THRESH 0.25
 #define BATCH_SIZE 1
 
 using namespace nvinfer1;

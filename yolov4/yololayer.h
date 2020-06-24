@@ -11,12 +11,12 @@
 
 namespace Yolo
 {
-    static constexpr int CHECK_COUNT = 3;
+    static constexpr int CHECK_COUNT = 9;
     static constexpr float IGNORE_THRESH = 0.1f;
     static constexpr int MAX_OUTPUT_BBOX_COUNT = 1000;
-    static constexpr int CLASS_NUM = 80;
-    static constexpr int INPUT_H = 608;
-    static constexpr int INPUT_W = 608;
+    static constexpr int CLASS_NUM = 1;
+    static constexpr int INPUT_H = 416;
+    static constexpr int INPUT_W = 416;
 
     struct YoloKernel
     {
@@ -28,17 +28,17 @@ namespace Yolo
     static constexpr YoloKernel yolo1 = {
         INPUT_W / 8,
         INPUT_H / 8,
-        {12,16, 19,36, 40,28}
+        {84, 19, 112, 25, 141, 28, 128, 37, 171, 35, 131, 53, 184, 43, 173, 64, 247, 51}
     };
     static constexpr YoloKernel yolo2 = {
         INPUT_W / 16,
         INPUT_H / 16,
-        {36,75, 76,55, 72,146}
+        {84, 19, 112, 25, 141, 28, 128, 37, 171, 35, 131, 53, 184, 43, 173, 64, 247, 51}
     };
     static constexpr YoloKernel yolo3 = {
         INPUT_W / 32,
         INPUT_H / 32,
-        {142,110, 192,243, 459,401}
+        {84, 19, 112, 25, 141, 28, 128, 37, 171, 35, 131, 53, 184, 43, 173, 64, 247, 51}
     };
 
     static constexpr int LOCATIONS = 4;
